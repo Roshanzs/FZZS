@@ -12,7 +12,6 @@
 		8BD793AE1DDAAA1C0087B994 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD793AD1DDAAA1C0087B994 /* ViewController.m */; };
 		8BD793B11DDAAA1C0087B994 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD793AF1DDAAA1C0087B994 /* Main.storyboard */; };
 		8BD793B31DDAAA1C0087B994 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8BD793B21DDAAA1C0087B994 /* Assets.xcassets */; };
-		8BD793B61DDAAA1C0087B994 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8BD793B41DDAAA1C0087B994 /* LaunchScreen.storyboard */; };
 		8BD7942A1DDAAA8D0087B994 /* LSYChapterVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD793C01DDAAA8D0087B994 /* LSYChapterVC.m */; };
 		8BD7942B1DDAAA8D0087B994 /* LSYMarkVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD793C21DDAAA8D0087B994 /* LSYMarkVC.m */; };
 		8BD7942C1DDAAA8D0087B994 /* LSYNoteVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD793C41DDAAA8D0087B994 /* LSYNoteVC.m */; };
@@ -66,10 +65,12 @@
 		8BD7945C1DDAAA8D0087B994 /* LSYTopMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD794291DDAAA8D0087B994 /* LSYTopMenuView.m */; };
 		8BD7945F1DDAAABD0087B994 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD7945E1DDAAABD0087B994 /* libz.tbd */; };
 		8BD794621DDAAFE90087B994 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BD794611DDAAFE90087B994 /* libxml2.tbd */; };
-		8BD794671DDAE1870087B994 /* BookTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD794661DDAE1870087B994 /* BookTableViewCell.m */; };
 		8BD794691DDAE9EB0087B994 /* mdjyml.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8BD794681DDAE9EB0087B994 /* mdjyml.txt */; };
 		8BD7946D1DDAEBC50087B994 /* MMPDeepSleepPreventer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD7946B1DDAEBC50087B994 /* MMPDeepSleepPreventer.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		8BD7946E1DDAEBC50087B994 /* MMPSilence.wav in Resources */ = {isa = PBXBuildFile; fileRef = 8BD7946C1DDAEBC50087B994 /* MMPSilence.wav */; };
+		8BD794771DDB157E0087B994 /* MBProgressHUD+MJ.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD794731DDB157E0087B994 /* MBProgressHUD+MJ.m */; };
+		8BD794781DDB157E0087B994 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 8BD794741DDB157E0087B994 /* MBProgressHUD.bundle */; };
+		8BD794791DDB157E0087B994 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BD794761DDB157E0087B994 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +82,6 @@
 		8BD793AD1DDAAA1C0087B994 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8BD793B01DDAAA1C0087B994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8BD793B21DDAAA1C0087B994 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8BD793B51DDAAA1C0087B994 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8BD793B71DDAAA1C0087B994 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8BD793BF1DDAAA8D0087B994 /* LSYChapterVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSYChapterVC.h; sourceTree = "<group>"; };
 		8BD793C01DDAAA8D0087B994 /* LSYChapterVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LSYChapterVC.m; sourceTree = "<group>"; };
@@ -182,12 +182,15 @@
 		8BD7945E1DDAAABD0087B994 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		8BD794601DDAAE710087B994 /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
 		8BD794611DDAAFE90087B994 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
-		8BD794651DDAE1870087B994 /* BookTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BookTableViewCell.h; sourceTree = "<group>"; };
-		8BD794661DDAE1870087B994 /* BookTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BookTableViewCell.m; sourceTree = "<group>"; };
 		8BD794681DDAE9EB0087B994 /* mdjyml.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = mdjyml.txt; sourceTree = "<group>"; };
 		8BD7946A1DDAEBC50087B994 /* MMPDeepSleepPreventer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPDeepSleepPreventer.h; sourceTree = "<group>"; };
 		8BD7946B1DDAEBC50087B994 /* MMPDeepSleepPreventer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPDeepSleepPreventer.m; sourceTree = "<group>"; };
 		8BD7946C1DDAEBC50087B994 /* MMPSilence.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = MMPSilence.wav; sourceTree = "<group>"; };
+		8BD794721DDB157E0087B994 /* MBProgressHUD+MJ.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+MJ.h"; sourceTree = "<group>"; };
+		8BD794731DDB157E0087B994 /* MBProgressHUD+MJ.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+MJ.m"; sourceTree = "<group>"; };
+		8BD794741DDB157E0087B994 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		8BD794751DDB157E0087B994 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		8BD794761DDB157E0087B994 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -227,17 +230,15 @@
 				8BD793AA1DDAAA1C0087B994 /* AppDelegate.m */,
 				8BD793AC1DDAAA1C0087B994 /* ViewController.h */,
 				8BD793AD1DDAAA1C0087B994 /* ViewController.m */,
-				8BD794651DDAE1870087B994 /* BookTableViewCell.h */,
-				8BD794661DDAE1870087B994 /* BookTableViewCell.m */,
 				8BD793AF1DDAAA1C0087B994 /* Main.storyboard */,
 				8BD794601DDAAE710087B994 /* Header.h */,
 				8BD794681DDAE9EB0087B994 /* mdjyml.txt */,
 				8BD7946A1DDAEBC50087B994 /* MMPDeepSleepPreventer.h */,
 				8BD7946B1DDAEBC50087B994 /* MMPDeepSleepPreventer.m */,
 				8BD7946C1DDAEBC50087B994 /* MMPSilence.wav */,
+				8BD794711DDB157E0087B994 /* MBP */,
 				8BD793BD1DDAAA8D0087B994 /* Reader */,
 				8BD793B21DDAAA1C0087B994 /* Assets.xcassets */,
-				8BD793B41DDAAA1C0087B994 /* LaunchScreen.storyboard */,
 				8BD793B71DDAAA1C0087B994 /* Info.plist */,
 				8BD793A61DDAAA1C0087B994 /* Supporting Files */,
 			);
@@ -460,6 +461,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		8BD794711DDB157E0087B994 /* MBP */ = {
+			isa = PBXGroup;
+			children = (
+				8BD794721DDB157E0087B994 /* MBProgressHUD+MJ.h */,
+				8BD794731DDB157E0087B994 /* MBProgressHUD+MJ.m */,
+				8BD794741DDB157E0087B994 /* MBProgressHUD.bundle */,
+				8BD794751DDB157E0087B994 /* MBProgressHUD.h */,
+				8BD794761DDB157E0087B994 /* MBProgressHUD.m */,
+			);
+			path = MBP;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,7 +533,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				8BD794581DDAAA8D0087B994 /* bt_tjcp_no@2x.png in Resources */,
-				8BD793B61DDAAA1C0087B994 /* LaunchScreen.storyboard in Resources */,
 				8BD7943D1DDAAA8D0087B994 /* reader_cover@2x.png in Resources */,
 				8BD7943B1DDAAA8D0087B994 /* ic_add.png in Resources */,
 				8BD7943F1DDAAA8D0087B994 /* sale_discount_yellow.png in Resources */,
@@ -533,6 +545,7 @@
 				8BD7946E1DDAEBC50087B994 /* MMPSilence.wav in Resources */,
 				8BD794691DDAE9EB0087B994 /* mdjyml.txt in Resources */,
 				8BD793B11DDAAA1C0087B994 /* Main.storyboard in Resources */,
+				8BD794781DDB157E0087B994 /* MBProgressHUD.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,12 +582,12 @@
 				8BD794541DDAAA8D0087B994 /* mztools.c in Sources */,
 				8BD794591DDAAA8D0087B994 /* LSYBottomMenuView.m in Sources */,
 				8BD794501DDAAA8D0087B994 /* CXMLUnsupportedNode.m in Sources */,
-				8BD794671DDAE1870087B994 /* BookTableViewCell.m in Sources */,
 				8BD793AB1DDAAA1C0087B994 /* AppDelegate.m in Sources */,
 				8BD794321DDAAA8D0087B994 /* LSYReadView.m in Sources */,
 				8BD7942F1DDAAA8D0087B994 /* LSYReadUtilites.m in Sources */,
 				8BD793A81DDAAA1C0087B994 /* main.m in Sources */,
 				8BD7944A1DDAAA8D0087B994 /* CXMLElement_CreationExtensions.m in Sources */,
+				8BD794791DDB157E0087B994 /* MBProgressHUD.m in Sources */,
 				8BD7944B1DDAAA8D0087B994 /* CXMLElement_ElementTreeExtensions.m in Sources */,
 				8BD794551DDAAA8D0087B994 /* unzip.c in Sources */,
 				8BD794451DDAAA8D0087B994 /* CXMLNode_CreationExtensions.m in Sources */,
@@ -582,6 +595,7 @@
 				8BD7946D1DDAEBC50087B994 /* MMPDeepSleepPreventer.m in Sources */,
 				8BD794561DDAAA8D0087B994 /* zip.c in Sources */,
 				8BD794371DDAAA8D0087B994 /* LSYReadModel.m in Sources */,
+				8BD794771DDB157E0087B994 /* MBProgressHUD+MJ.m in Sources */,
 				8BD7945C1DDAAA8D0087B994 /* LSYTopMenuView.m in Sources */,
 				8BD794531DDAAA8D0087B994 /* ioapi.c in Sources */,
 				8BD794521DDAAA8D0087B994 /* UIImage+ImageEffects.m in Sources */,
@@ -602,14 +616,6 @@
 				8BD793B01DDAAA1C0087B994 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8BD793B41DDAAA1C0087B994 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8BD793B51DDAAA1C0087B994 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -707,13 +713,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 29WV9763CF;
 				GCC_PREFIX_HEADER = "疯子助手/Header.h";
 				HEADER_SEARCH_PATHS = "${SDK_ROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = "疯子助手/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zbk.fengzizhushou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zbk.fengzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -722,13 +729,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = 29WV9763CF;
 				GCC_PREFIX_HEADER = "疯子助手/Header.h";
 				HEADER_SEARCH_PATHS = "${SDK_ROOT}/usr/include/libxml2";
 				INFOPLIST_FILE = "疯子助手/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.zbk.fengzizhushou;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zbk.fengzi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

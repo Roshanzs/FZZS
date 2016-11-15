@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "LSYReadPageViewController.h"
 #import "LSYReadModel.h"
-#import "BookTableViewCell.h"
+#import "MBProgressHUD+MJ.h"
 
 #define ScreenW [UIScreen mainScreen].bounds.size.width
 #define ScreenH [UIScreen mainScreen].bounds.size.height
@@ -36,7 +36,7 @@
     [self.view addSubview:tableView];
     tableView.delegate = self;
     tableView.dataSource = self;
-    [tableView registerClass:[BookTableViewCell class] forCellReuseIdentifier:@"cell"];
+    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
     UIView *headView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, ScreenW, 123.0 / 736.0 * ScreenH)];
     UILabel *lab = [[UILabel alloc]initWithFrame:headView.bounds];
     lab.textAlignment = NSTextAlignmentCenter;
@@ -53,7 +53,7 @@
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    BookTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     cell.textLabel.text = self.txtArr[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
     cell.textLabel.font = [UIFont systemFontOfSize:28];
@@ -66,14 +66,20 @@
 
 //获取选中的电子书并加载显示出来
 -(void)touchTxtWithRow:(NSString *)row{
+    [MBProgressHUD showMessage:@"正在打开书本"];
     LSYReadPageViewController *controller = [[LSYReadPageViewController alloc]init];
     NSString *basePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
     NSString *path = [basePath stringByAppendingPathComponent:row];
     NSURL *url = [NSURL fileURLWithPath:path];
     controller.resourceURL = url;
-    controller.model = [LSYReadModel getLocalModelWithURL:url];
-    [self presentViewController:controller animated:YES completion:nil];
-
+    dispatch_async(dispatch_get_global_queue(0, 0), ^{
+        controller.model = [LSYReadModel getLocalModelWithURL:url];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [MBProgressHUD hideHUD];
+            [self presentViewController:controller animated:YES completion:nil];
+            
+        });
+    });
 }
 
 -(void)viewDidAppear:(BOOL)animated{
